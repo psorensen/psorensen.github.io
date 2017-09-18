@@ -2,7 +2,7 @@
 layout: post
 title:  "Adding Elements to the TinyMCE Format Dropdown"
 date:   2017-07-11 14:59:53 -0700
-categories: wordpress tinymce
+categories: wordpress
 ---
 # Adding Elements to the TinyMCE Format Dropdown
 
