@@ -8,7 +8,7 @@ categories: wordpress
 
 On a recent migration project, one of the requirements was to add a few blockquote styles to the TinyMCE dropdown list to match the editorial process of the old CMS. Wordpress [provides a filter](https://codex.wordpress.org/TinyMCE_Custom_Styles) to add a secondary or tetriary dropdown, but if you only have a couple additional elements, it seems like bad UX to seperate it from the original dropdown.
 
-Wordpress does not send a argument for `block_formats` when initializing TinyMCE, thus [relying on the defaults](https://www.tinymce.com/docs/configure/content-formatting/#block_formats). By adding this argument to the `tiny_mce_before_init` filter, we can add in our extra elements*:
+Wordpress does provide an argument for `block_formats` when initializing TinyMCE, thus [relying on the defaults](https://www.tinymce.com/docs/configure/content-formatting/#block_formats). By adding this argument to the `tiny_mce_before_init` filter, we can add in our extra elements*:
 
 \* Note: since we're overriding the defaults, we need to include the original elements (p, h1-h6..etc)
 
@@ -26,7 +26,7 @@ function mce_formats( $init ) {
 		'pullquote-3' => __( 'Pull Quote 3', 'text-domain' ),
 	);
 
-		// concat array elements to string
+	// concat array elements to string
 	array_walk( $formats, function ( $key, $val ) use ( &$block_formats ) {
 		$block_formats .= esc_attr( $key ) . '=' . esc_attr( $val ) . ';';
 	}, $block_formats = '' );
