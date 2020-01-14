@@ -16,7 +16,7 @@
 title: Peter Sorensen
 email: peter.jens.sorensen@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Peter Sorensen is a web developer based in Oregon. He's currently a senior engineer at <a href="https://10up.com">10up</a>.
+  Peter Sorensen is an Oregon-based web developer.
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://psorensen.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
